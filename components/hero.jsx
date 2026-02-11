@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className="relative h-screen bg-cover bg-center flex items-center justify-start bg-[url('/landing-page.jpg')]" >
             {/* blue overlay */}
-            <div className="absolute inset-0 bg-[#0F2A4A]/70"></div>
+            <div className="absolute inset-0 bg-[#0F2A4A]/80"></div>
 
             {/* bottom fade to white */}
             <div className="absolute bottom-0 left-0 w-full h-30  bg-linear-to-b from-transparent to-white"></div>
