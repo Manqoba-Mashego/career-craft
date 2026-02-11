@@ -32,7 +32,7 @@ const Navbar = () => {
                         <div className='text-[#e6b01d]'>
                             <FileText />
                         </div>
-                        <p className={` transition-all ease-in-out duration-300  font-bold text-[20px] ${scrolled ? "text-black" : "text-white"}`}>CareerCraft</p>
+                        <p className={` transition-all ease-in-out duration-300  font-bold text-[20px] ${scrolled ? "text-black" : "text-white"}`}>USIZO</p>
                     </Link>
                     {/* Desktop links */}
                     <div className={`hidden md:flex items-center font-semibold transition-all ease-in-out duration-300 text-sm ${scrolled ? "text-gray-500" : "text-gray-300"}`}>
