@@ -1,6 +1,8 @@
+"use client";
 import React from 'react'
 import ServiceCard from './serviceCard'
 import { FileText, PenTool, Users } from 'lucide-react'
+import Reveal from './reveal'
 
 const Services = () => {
     const services = [
@@ -24,17 +26,21 @@ const Services = () => {
         },
     ]
   return (
-    <div id='services' className='w-[90%] mx-auto'>
-        <div className='text-center max-w-150 mx-auto mt-20'>
-            <p className='text-[#faa329] font-semibold'>WHAT WE OFFER</p>
-            <p className='font-playfair text-[48px] font-black text-[#0d0729] mb-3'>Our Services</p>
-            <p className='text-gray-600 text-lg'>From crafting the perfect CV to acing your interviews, we provide end-to-end career support.</p>
+    <div id='services' className='scroll-mt-30 w-[90%] mt-20 mb-25 mx-auto'>
+        <div className='text-center max-w-150 mx-auto'>
+            <Reveal>
+                <p className='text-[#faa329] font-semibold'>WHAT WE OFFER</p>
+                <p className='font-playfair text-[48px] font-black text-[#0d0729] mb-3'>Our Services</p>
+                <p className='text-gray-600 text-lg'>From crafting the perfect CV to acing your interviews, we provide end-to-end career support.</p>
+            </Reveal>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-17'>
-            {services.map((service) => (
-                <ServiceCard title={service.title} description={service.description} points={service.points} icon={service.icon} key={service.title}/>
-            ))}
-        </div>
+        <Reveal>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-17'>
+                {services.map((service) => (
+                    <ServiceCard title={service.title} description={service.description} points={service.points} icon={service.icon} key={service.title}/>
+                ))}
+            </div>
+        </Reveal>
     </div>
   )
 }

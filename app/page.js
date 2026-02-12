@@ -1,4 +1,5 @@
 import Hero from '@/components/hero'
+import HowItWorks from '@/components/howItWorks'
 import Services from '@/components/services'
 import React from 'react'
 
@@ -7,6 +8,7 @@ const Page = () => {
     <div>
       <Hero />
       <Services />
+      <HowItWorks />
     </div>
   )
 }

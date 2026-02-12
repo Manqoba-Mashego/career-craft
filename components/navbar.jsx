@@ -2,6 +2,7 @@
 import { FileText, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +25,11 @@ const Navbar = () => {
         }
     })
     return (
-        <nav className={`fixed top-0 inset-x-0 z-50 transition-all ease-in-out duration-300 ${scrolled ? "bg-[#eeeded] shadow-lg" : ""}`}>
+        <motion.div initial={{y: -80, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 0.6, ease: "easeOut"}} className={`fixed top-0 inset-x-0 z-50 transition-all ease-in-out duration-300 ${scrolled ? "bg-[#eeeded] shadow-lg" : ""}`}>
             <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`flex transition-all ease-in-out duration-300 justify-between ${scrolled ? "h-16" : "h-20"}`}>
                     {/* Logo */}
-                    <Link href={"/"} className='flex gap-2 items-center'>
+                    <Link href={"#hero"} className='flex gap-2 items-center'>
                         <div className='text-[#e6b01d]'>
                             <FileText />
                         </div>
@@ -37,7 +38,7 @@ const Navbar = () => {
                     {/* Desktop links */}
                     <div className={`hidden md:flex items-center font-semibold transition-all ease-in-out duration-300 text-sm ${scrolled ? "text-gray-500" : "text-gray-300"}`}>
                         <Link href={"#services"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Services</Link>
-                        <Link href={"/home"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>How It Works</Link>
+                        <Link href={"#how-it-works"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>How It Works</Link>
                         <Link href={"/home"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Pricing</Link>
                         <Link href={"/home"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Book Now</Link>
                     </div>
@@ -63,7 +64,7 @@ const Navbar = () => {
                 </div>
             )}
 
-        </nav>
+        </motion.div>
     )
 }
 
