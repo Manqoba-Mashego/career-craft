@@ -18,3 +18,16 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@layer utilities {
+  .input-field {
+    @apply border border-gray-200 mt-1 w-full px-4 py-2 bg-[#faf8f5] rounded-xl focus:ring-2 focus:outline-none focus:ring-[#faa329] text-sm;
+  }
+  .input-label {
+    @apply font-semibold text-sm;
+  }
+
+  .form-title {
+    @apply font-bold text-xl mb-4;
+  }
+}

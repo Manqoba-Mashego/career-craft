@@ -1,3 +1,4 @@
+import CVSection from '@/components/cvSection'
 import Hero from '@/components/hero'
 import HowItWorks from '@/components/howItWorks'
 import Services from '@/components/services'
@@ -9,6 +10,8 @@ const Page = () => {
       <Hero />
       <Services />
       <HowItWorks />
+      <CVSection />
+      
     </div>
   )
 }
