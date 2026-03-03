@@ -1,29 +1,46 @@
 "use client";
-import React from 'react'
-import Reveal from './reveal'
-import PersonalDetails from './formSections/personalDetails';
-import FormSection from './formSections/formSection';
-import Education from './formSections/education';
+import React, { useState } from 'react'
+import PreCVForm from './preCVForm';
+import ConsultationForm from './consultationForm';
 
 const CVSection = () => {
+  const [hasCV, setHasCV] = useState(null);
+
   return (
-    <div className='py-30'>
-        <div>
-          <Reveal>
-            <p className='text-[#faa329] font-semibold text-center'>CREATE YOUR CV</p>
-            <p className='font-playfair text-[48px] text-center font-black  mb-3'>Build Your Professional CV</p>
-            <p className='text-gray-500 text-center mb-15 max-w-2xl mx-auto text-lg'>Please fill in the following information to help us start putting together your desired CV.</p>
-          </Reveal>
-        </div>
+    <div className="py-24 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
 
-		<form>
-			<PersonalDetails />
-      <Education/>
-		</form>
-          <p className='text-red-500 text-xl text-center'>NOTE!!! The rest of this form is still under construction!</p>
+        {hasCV === null && (
+          <div className="bg-white p-10 rounded-2xl shadow-lg text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Do you already have a CV?
+            </h2>
 
+            <div className="flex justify-center gap-6">
+              <button
+                onClick={() => setHasCV(true)}
+                className="bg-[#faa329] text-white cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-[#e6951f] transition"
+              >
+                YES
+              </button>
+
+              <button
+                onClick={() => setHasCV(false)}
+                className="border border-gray-300 cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              >
+                NO
+              </button>
+            </div>
+          </div>
+        )}
+
+        {hasCV === true && <ConsultationForm />}
+        {hasCV === false && <PreCVForm />}
+
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CVSection
+export default CVSection;
+
