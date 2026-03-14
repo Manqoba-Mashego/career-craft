@@ -2,11 +2,11 @@
 import { useEffect } from 'react';
 
 import CVSection from '@/components/cvSection'
-import GeneralHowItWorks from '@/components/generalHowItWorks'
 import Hero from '@/components/hero'
 import CoverLetterSection from '@/components/coverLetterSection'
 import Services from '@/components/services'
 import React from 'react'
+import InterviewPrepSection from '@/components/interviewPrepSection';
 
 const Page = () => {
   useEffect(() => {
@@ -20,10 +20,9 @@ const Page = () => {
     <div>
       <Hero />
       <Services />
-      {/* <GeneralHowItWorks /> */}
       <CoverLetterSection />
       <CVSection />
-      
+      <InterviewPrepSection />
     </div>
   )
 }
