@@ -1,40 +1,40 @@
 "use client";
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Download, FileCheck, MessageSquare, Upload } from 'lucide-react';
+import { CreditCard, Download, FileCheck, FileText, MessageSquare, Upload } from 'lucide-react';
 import Reveal from './reveal';
 
-const HowItWorks = () => {
+const CoverLetterSection = () => {
     const steps = [
         {
-            title: "Upload Your CV",
-            description: "Share your current CV or start fresh.",
-            Icon: Upload
+            title: "Book a Consultation",
+            description: "Fill out our consultation form with your details and attach your CV.",
+            Icon: MessageSquare
         },
         {
-            title: "Get Expert Feedback",
-            description: "Our consultants refine your documents.",
-            Icon: MessageSquare
+            title: "Expert Drafting",
+            description: "Our consultants will craft a tailored cover letter matching your target role and industry.",
+            Icon: FileText
 
         },
         {
-            title: "Approve & Pay",
-            description: "Review the polished result and checkout.",
-            Icon: FileCheck
+            title: "Review & Pay",
+            description: "Review the polished cover letter, request adjustments, and complete your payment.",
+            Icon: CreditCard
         },
         {
             title: "Download & Apply",
-            description: "Download and apply with confidence.",
+            description: "Download your professional cover letter and apply with confidence.",
             Icon: Download
         },
     ]
   return (
-        <div className='relative min-h-screen py-24 bg-[#162B4E] overflow-hidden scroll-mt-15' id='how-it-works'>
+        <div className='relative min-h-screen py-24 bg-[#162B4E] overflow-hidden scroll-mt-15' id='cover-letter'>
           <div className='w-[90%] max-w-7xl mx-auto'>
               <Reveal>
-                <p className='text-[#faa329] font-semibold text-center'>SIMPLE PROCESS</p>
+                <p className='text-[#faa329] font-semibold text-center'>COVER LETTER PROCESS</p>
                 <p className='font-playfair text-[48px] text-center font-black text-white mb-3'>How It Works</p>
-                <p className='text-gray-300 text-center mb-15 text-lg'>Four simple steps to your career-ready documents.</p>
+                <p className='text-gray-300 text-center mb-15 text-lg'>Four simple steps to your professional cover letter.</p>
               </Reveal>
             <div className="relative">
                 <div className='origin-left absolute left-0 top-12 w-full h-0.5  bg-[#faa329] md:origin-top'></div>
@@ -62,4 +62,4 @@ const HowItWorks = () => {
   )
 }
 
-export default HowItWorks
+export default CoverLetterSection

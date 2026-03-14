@@ -3,11 +3,13 @@ import { FileText, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
+import useScrollToSection from '@/hooks/useScrollToSection';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
     const [scrolled, setScrolled] = useState(false);
+    const scrollToSection = useScrollToSection();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,10 +39,11 @@ const Navbar = () => {
                     </Link>
                     {/* Desktop links */}
                     <div className={`hidden md:flex items-center font-semibold transition-all ease-in-out duration-300 text-sm ${scrolled ? "text-gray-500" : "text-gray-300"}`}>
-                        <Link href={"#services"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Services</Link>
-                        <Link href={"#how-it-works"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>How It Works</Link>
-                        <Link href={"/home"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Pricing</Link>
-                        <Link href={"/home"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg'>Book Now</Link>
+                        <button onClick={() => scrollToSection("services")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Services</button>
+                        <button onClick={() => scrollToSection("cover-letter")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Cover Letter</button>
+                        <button onClick={() => scrollToSection("cv-consultation")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>CV Consultation</button>
+                        <button onClick={() => scrollToSection("interview-prep")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Interview Prep</button>
+                        <Link href="/consultation" className=' bg-[#e69c1d] hover:bg-[#e6b01d] text-black px-4 py-2 transition rounded-lg cursor-pointer'>Book Now</Link>
                     </div>
 
                     {/* Mobile Hamburger */}

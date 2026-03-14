@@ -11,18 +11,21 @@ const Services = () => {
             description: "Expert review and optimization of your CV to highlight your strengths and stand out to recruiters.",
             points: ["ATS-optimized formatting", "Keyword analysis", "Personal branding"],
             icon: FileText,
+            section: "cv-consultation"
         },
         {
             title: "Cover Letter Writting",
             description: "Tailored, compelling cover letters crafted to match each role and company you apply to.",
             points: ["Role-specific tailoring", "Tone & style matching", "Download ready"],
             icon: PenTool,
+            section: "cover-letter"
         },
         {
             title: "Interview Preparation",
             description: "One-on-one coaching sessions to build confidence and master your interview technique.",
             points: ["Mock interviews", "Behavioral prep", "Feedback sessions"],
             icon: Users,
+            section: "interview-prep"
         },
     ]
   return (
@@ -37,7 +40,7 @@ const Services = () => {
         <Reveal>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-17'>
                 {services.map((service) => (
-                    <ServiceCard title={service.title} description={service.description} points={service.points} icon={service.icon} key={service.title}/>
+                    <ServiceCard title={service.title} description={service.description} points={service.points} icon={service.icon} key={service.title} section={service.section}/>
                 ))}
             </div>
         </Reveal>

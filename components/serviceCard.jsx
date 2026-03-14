@@ -1,7 +1,10 @@
+"use client";
+import useScrollToSection from '@/hooks/useScrollToSection';
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 
-const ServiceCard = ({icon: Icon, title, description, points, }) => {
+const ServiceCard = ({icon: Icon, title, description, points, section}) => {
+    const scrollToSection = useScrollToSection();
   return (
     <div className='bg-white border border-gray-200 rounded-2xl px-10 py-8 flex flex-col gap-5 shadow-md'>
         <div className='bg-[#e69c1d27] p-4 rounded-xl w-fit'>
@@ -14,7 +17,7 @@ const ServiceCard = ({icon: Icon, title, description, points, }) => {
                 <li key={id} className='text-gray-600'>{point}</li>
             ))}
         </ul>
-        <p className='text-[#e69c1d] cursor-pointer flex items-center gap-2 group font-semibold text-sm my-5'>Learn More <ArrowRight size={16} className='transition-transform duration-300 group-hover:translate-x-1'/></p>
+        <button onClick={() => scrollToSection(section)} className='text-[#e69c1d] cursor-pointer flex items-center gap-2 group font-semibold text-sm my-5'>Learn More <ArrowRight size={16} className='transition-transform duration-300 group-hover:translate-x-1'/></button>
     </div>
   )
 }

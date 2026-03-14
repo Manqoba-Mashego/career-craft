@@ -2,8 +2,10 @@
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 import Reveal from './reveal'
+import useScrollToSection from '@/hooks/useScrollToSection';
 
 const Hero = () => {
+    const scrollToSection = useScrollToSection();
     return (
         <div id='hero' className="relative h-screen bg-cover bg-center flex items-center justify-start bg-[url('/landing-page.jpg')]" >
             <div className="absolute inset-0 bg-[#0F2A4A]/80"></div>
@@ -18,7 +20,7 @@ const Hero = () => {
                     </Reveal>
                     <Reveal duration={2}>
                         <div className='flex gap-2' >
-                            <button className='bg-[#e69c1d] transition-all ease-in-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6c11d] px-10 py-4 flex rounded-xl gap-2 font-semibold'>Explore Services <ArrowRight /></button>
+                            <button onClick={() => scrollToSection("services")} className='bg-[#e69c1d] transition-all ease-in-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6c11d] px-10 py-4 flex rounded-xl gap-2 font-semibold'>Explore Services <ArrowRight /></button>
                             <button className='text-[#e69c1d] transition-all ease-in-out duration-300 border-2 border-[#e69c1d] hover:bg-[#e69c1d] hover:text-[#0F2A4A] cursor-pointer font-semibold rounded-xl px-10 py-4'>Book Consultation</button>
                         </div>
                     </Reveal>
