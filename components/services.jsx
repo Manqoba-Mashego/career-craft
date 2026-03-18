@@ -14,18 +14,18 @@ const Services = () => {
             section: "cv-consultation"
         },
         {
-            title: "Cover Letter Writting",
-            description: "Tailored, compelling cover letters crafted to match each role and company you apply to.",
-            points: ["Role-specific tailoring", "Tone & style matching", "Download ready"],
-            icon: PenTool,
-            section: "cover-letter"
-        },
-        {
             title: "Interview Preparation",
             description: "One-on-one coaching sessions to build confidence and master your interview technique.",
             points: ["Mock interviews", "Behavioral prep", "Feedback sessions"],
             icon: Users,
             section: "interview-prep"
+        },
+        {
+            title: "Cover Letter Writting",
+            description: "Tailored, compelling cover letters crafted to match each role and company you apply to.",
+            points: ["Role-specific tailoring", "Tone & style matching", "Download ready"],
+            icon: PenTool,
+            section: "cover-letter"
         },
     ]
   return (

@@ -20,9 +20,9 @@ const Page = () => {
     <div>
       <Hero />
       <Services />
-      <CoverLetterSection />
       <CVSection />
       <InterviewPrepSection />
+      <CoverLetterSection />
     </div>
   )
 }

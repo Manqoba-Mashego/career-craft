@@ -43,7 +43,6 @@ const Navbar = () => {
                         <button onClick={() => scrollToSection("cover-letter")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Cover Letter</button>
                         <button onClick={() => scrollToSection("cv-consultation")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>CV Consultation</button>
                         <button onClick={() => scrollToSection("interview-prep")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Interview Prep</button>
-                        <Link href="/consultation" className=' bg-[#e69c1d] hover:bg-[#e6b01d] text-black px-4 py-2 transition rounded-lg cursor-pointer'>Book Now</Link>
                     </div>
 
                     {/* Mobile Hamburger */}
