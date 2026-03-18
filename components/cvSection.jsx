@@ -1,11 +1,7 @@
 "use client";
 import React, { useState } from 'react'
-import PreCVForm from './preCVForm';
-import ConsultationForm from './consultationForm';
 import Reveal from './reveal';
-import FormSection from './formSections/formSection';
 import { CircleCheckBig, ExternalLink, FileText } from 'lucide-react';
-import UploadFile from './ui/uploadFile';
 import Link from 'next/link';
 
 const CVSection = () => {

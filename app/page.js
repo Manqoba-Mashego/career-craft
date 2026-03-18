@@ -7,6 +7,7 @@ import CoverLetterSection from '@/components/coverLetterSection'
 import Services from '@/components/services'
 import React from 'react'
 import InterviewPrepSection from '@/components/interviewPrepSection';
+import Footer from '@/components/footer';
 
 const Page = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Page = () => {
       <CVSection />
       <InterviewPrepSection />
       <CoverLetterSection />
+      <Footer />
     </div>
   )
 }
