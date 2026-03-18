@@ -44,6 +44,7 @@ const Services = () => {
                 ))}
             </div>
         </Reveal>
+        
     </div>
   )
 }

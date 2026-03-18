@@ -35,7 +35,7 @@ const InterviewPrepSection = () => {
         </Reveal>
         <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
 			{items.map((item, index) => (
-				<div key={index} className='border border-gray-300 transition-all duration-200 ease hover:shadow-lg rounded-2xl bg-white p-8 flex flex-col gap-5'>
+				<div key={index} className='border border-gray-300 transition-all duration-300 ease hover:shadow-lg rounded-2xl bg-white p-8 flex flex-col gap-5'>
 					<div className='text-[#faa329] bg-[#ee9a0920] p-3 rounded-xl w-fit'>
 						<item.icon />
 					</div>

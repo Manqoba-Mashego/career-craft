@@ -5,7 +5,6 @@ import { CircleCheckBig, ExternalLink, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 const CVSection = () => {
-  	const [hasCV, setHasCV] = useState("");
 	const points = ["Expert of your existing CV", "ATS-optimized formatting & keywords", "Professional layout & personal branding", "Detailed feedback on content & structure", "Industry-specific tailoring", "One round of revisions included"]
 
   return (
