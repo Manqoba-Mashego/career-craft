@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="absolute bottom-0 left-0 w-full h-30  bg-linear-to-b from-transparent to-white"></div>
                 <div className="relative text-left text-white px-4 w-[90%] mx-auto">
                     <Reveal duration={1.2}>
-                        <h1 className={`text-5xl font-black font-playfair lg:text-[72px] w-[55%] tracking-wide`}>Elevate Your <span className='text-[#e6b01d]'>Career</span> With Expert Guidance</h1>
+                        <h1 className={`text-5xl font-black font-playfair lg:text-[72px] lg:w-[55%] tracking-wide`}>Elevate Your <span className='text-[#e6b01d]'>Career</span> With Expert Guidance</h1>
                     </Reveal>
                     <Reveal duration={1.7}>
                         <p className="text-lg max-w-xl text-gray-300 my-8">Professional CV consultation, cover letter writing, and interview preparation — everything you need to land your dream role.</p>

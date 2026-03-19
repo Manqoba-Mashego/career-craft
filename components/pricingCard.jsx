@@ -6,7 +6,7 @@ const PricingCard = ({service, details, price, points, cta, ctaLink, blank}) => 
   return (
     <div className='bg-white p-5 border-gray-300 border hover:border-amber-100 rounded-2xl hover:shadow-lg  transition-all ease duration-300 w-full'>
         <div className='h-full flex flex-col'>
-            <p className="font-bold font-serif text-lg">{service}</p>
+            <p className="font-bold font-serif md:text-lg">{service}</p>
             <p className="text-xs text-gray-500">{details}</p>
             <p className="text-4xl font-serif mb-5 mt-2 font-black">R{price}</p>
             <ul className='mb-6 flex flex-col gap-2   '>

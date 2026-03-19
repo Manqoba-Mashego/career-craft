@@ -47,7 +47,7 @@ const Pricing = () => {
             <div className='text-center mx-auto'>
                 <Reveal>
                     <p className='text-[#faa329] font-semibold'>PRICING</p>
-                    <p className='font-playfair text-[48px] font-black text-[#0d0729] mb-3'>Simple, Transparent Pricing</p>
+                    <p className='font-playfair text-[48px] leading-[1.3] font-black text-[#0d0729] mb-3'>Simple, Transparent Pricing</p>
                     <p className='text-gray-600 text-lg'>Affordable career services to help you land your next job.</p>
                 </Reveal>
             </div>
