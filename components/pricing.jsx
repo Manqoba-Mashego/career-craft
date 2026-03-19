@@ -42,7 +42,7 @@ const Pricing = () => {
         },
     ]
   return (
-    <div id='pricing' className='bg-[#e7e9ef4c] scroll-mt-30 min-h-screen py-20'>
+    <div id='pricing' className='bg-[#e7e9ef4c] scroll-mt-10 min-h-screen py-20'>
         <div className='w-[90%] mx-auto '>
             <div className='text-center mx-auto'>
                 <Reveal>

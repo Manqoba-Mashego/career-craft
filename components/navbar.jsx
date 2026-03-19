@@ -7,7 +7,12 @@ import useScrollToSection from '@/hooks/useScrollToSection';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => setIsOpen(!isOpen);
+    const toggleMenu = (id) => {
+        setIsOpen(!isOpen);
+        if (id !== undefined){
+            scrollToSection(id);
+        }
+    };
     const [scrolled, setScrolled] = useState(false);
     const scrollToSection = useScrollToSection();
 
@@ -59,10 +64,12 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
                     <div className="flex flex-col px-6 py-4 space-y-4 ml-4">
-                        <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>Services</Link>
-                        <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>How It Works</Link>
-                        <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>Pricing</Link>
-                        <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>Book Now</Link>
+                        <button onClick={() => toggleMenu("services")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Services</button>
+                        <button onClick={() => toggleMenu("pricing")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Pricing</button>
+                        <button onClick={() => toggleMenu("cv-consultation")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>CV Consultation</button>
+                        <button onClick={() => toggleMenu("interview-prep")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Interview Prep</button>
+                        <button onClick={() => toggleMenu("cover-letter")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Cover Letter</button>
+                        {/* <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>Services</Link> */}
                     </div>
                 </div>
             )}
