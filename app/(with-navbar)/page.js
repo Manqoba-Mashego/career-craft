@@ -11,7 +11,10 @@ import Footer from '@/components/footer';
 import Pricing from '@/components/pricing';
 
 const Page = () => {
+
+  
   useEffect(() => {
+    // initializePayment();
   const hash = window.location.hash.replace("#", "");
   if (hash) {
     const el = document.getElementById(hash);
