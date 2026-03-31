@@ -13,8 +13,6 @@ export async function GET(req) {
 
     const { searchParams } = new URL(req.url);
 
-    console.log("Incoming request: ", req.url);
-
     const token = searchParams.get("token");
     const reference = searchParams.get("reference") || searchParams.get("trxref");
 

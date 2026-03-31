@@ -2,18 +2,29 @@
 export const dynamic = "force-dynamic";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import DownloadSection from "@/components/downloadPage";
 
 function DownloadPage() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
   const [status, setStatus] = useState("verifying");
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     if (!token) {
       setStatus("error");
       return;
     }
+    const fetchEmail = async () => {
+        if (!token) return;
+        const res = await fetch(`/api/download-info?token=${token}`);
+        const data = await res.json();
+        setEmail(data.email);
+        console.log("data");
+    }
+
+    fetchEmail();
 
     const downloadFile = async () => {
       try {
@@ -43,14 +54,7 @@ function DownloadPage() {
   return (
     <div className="flex items-center justify-center h-screen">
       {status === "verifying" && <p>Verifying your link...</p>}
-      {status === "success" && 
-        <div className="flex flex-col items-center justify-center h-screen text-center gap-4">
-            <h1 className="text-2xl font-bold">Your download has started</h1>
-            <p className="text-gray-600">If it didn’t start automatically, click below:</p>
-            <a href={`/api/download?token=${token}`} className="bg-[#e69c1d]  text-white px-4 py-2 rounded-lg">Download again</a>
-            <p className="text-sm text-gray-500">A copy has also been sent to your email.</p>
-            <p className="text-xs text-gray-400">This link will expire shortly for security reasons.</p>
-        </div>}
+      {status === "success" && <DownloadSection token={token} email={email}/>}
       {status === "error" && (
         <p>Invalid or expired link. Please check your email or try again.</p>
       )}
