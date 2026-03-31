@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
+import crypto from "crypto"
 import { redis } from "@/lib/redis";
 import { ratelimit } from "@/lib/rateLimit";
-import crypto from "crypto"
+import { sendDownloadEmail } from "@/lib/email";
 
 
 export async function GET(req) {
@@ -73,6 +74,8 @@ export async function GET(req) {
             },
             { ex: 60 * 10 } 
         );
+
+        await sendDownloadEmail(verifyData.data.customer?.email, newToken);
         return new Response(null, {
             status: 302,
             headers: {
