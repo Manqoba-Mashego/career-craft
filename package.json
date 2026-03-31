@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@paystack/inline-js": "^2.22.8",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.37.0",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.563.0",
     "next": "16.1.6",

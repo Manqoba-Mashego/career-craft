@@ -57,8 +57,9 @@ const HowItWorks = () => {
                             )}
                         </div>
                 </div>
-                {/* <Link href="/cover-letter/email" target='blank' className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-3 md:px-20\\ py-4  rounded-xl gap-2 font-semibold w-fit"><span><Download />Pay & Download</span></Link> */}
-                <Link href="/cover-letter/email" className="flex mx-auto w-fit  items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-10 py-4  rounded-xl gap-2 font-semibold mt-12"><Download /><span>Pay & Download</span></Link>
+                <Reveal>
+                    <Link href="/cover-letter/email" className="flex mx-auto w-fit  items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-10 py-4  rounded-xl gap-2 font-semibold mt-12"><Download /><span>Pay & Download</span></Link>
+                </Reveal>
             </div>
         </div>
     )

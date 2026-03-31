@@ -15,7 +15,7 @@ const Page = () => {
             body: JSON.stringify({
             email,
             amount: 5000,
-            callback_url: "http://localhost:3000/cover-letter/download"
+            callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cover-letter/verify`
             }),
         });
 
