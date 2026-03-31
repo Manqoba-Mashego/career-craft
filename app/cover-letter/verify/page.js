@@ -1,8 +1,9 @@
 "use client";
-import { useEffect } from "react";
+export const dynamic = "force-dynamic";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function VerifyPage() {
+function VerifyPage() {
   const params = useSearchParams();
   const reference = params.get("reference") || params.get("trxref");
 
@@ -17,4 +18,12 @@ export default function VerifyPage() {
         <p>Verifying payment...</p>
     </div>
   );
+}
+
+export default function Page(){
+    return (
+        <Suspense fallback={<p>Loading...</p>}>
+            <VerifyPage />
+        </Suspense>
+    )
 }

@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+export const dynamic = "force-dynamic";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function DownloadPage() {
+function DownloadPage() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
@@ -55,4 +56,12 @@ export default function DownloadPage() {
       )}
     </div>
   );
+}
+
+export default function Page(){
+    return (
+        <Suspense fallback={<p>Loading...</p>}> 
+            <DownloadPage />
+        </Suspense>
+    )
 }
