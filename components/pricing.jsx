@@ -14,6 +14,15 @@ const Pricing = () => {
             blank: false
         },
         {
+            service: "Cover Letter Consultation",
+            details: "One-on-one session to craft a tailored cover letter for a specific role",
+            price: 70,
+            points: ["Role-specific cover letter creation", "Personalised content based on your experience","Live consultation & guidance", "One revision round"],
+            cta: "Book Session",
+            ctaLink: "https://docs.google.com/forms",
+            blank: true
+        },
+        {
             service: "CV Revamp",
             details: "Refresh and optimise your existing CV",
             price: 80,
@@ -52,7 +61,7 @@ const Pricing = () => {
                 </Reveal>
             </div>
             <div className='lg:flex lg:justify-center'>
-                <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  mx-auto mt-15">
+                <Reveal className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5  mx-auto mt-15">
                     {prices.map((item, index) => (
                         <PricingCard key={index} service={item.service} details={item.details} price={item.price} points={item.points} cta={item.cta} ctaLink={item.ctaLink} blank={item.blank}/>
                     ))}

@@ -32,7 +32,10 @@ const CVSection = () => {
 					))}
 					</ul>
 					<div>
-						<Link href="https://docs.google.com/forms/d/e/1FAIpQLSc5Kq3siizIADxEGE34pOF1vWZUqNEjfjzWrZO1ESDCtW97Zg/viewform" target='blank' className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-3 md:px-7 lg:px-10 py-4  rounded-xl gap-2 font-semibold w-fit"><span>Book CV Consultation</span> <ExternalLink size={15}/></Link>
+						<Link href="https://docs.google.com/forms/d/e/1FAIpQLSc5Kq3siizIADxEGE34pOF1vWZUqNEjfjzWrZO1ESDCtW97Zg/viewform" target='blank' className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-3 md:px-7 lg:px-10 py-4  rounded-xl gap-2 font-semibold w-fit">
+							<span>Book CV Consultation</span> 
+							<ExternalLink size={15}/>
+						 </Link>
 						<p className='text-center text-xs text-gray-400 mt-2'>You'll be redirected to our Google Form to submit your details</p>
 					</div>
 			</div>
