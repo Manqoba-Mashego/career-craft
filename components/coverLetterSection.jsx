@@ -61,6 +61,7 @@ const HowItWorks = () => {
                     <p className='font-playfair text-3xl md:text-5xl text-center font-black text-white mb-3'>How It Works</p>
                     <p className='text-gray-300 text-center mb-10 text-lg'>Four simple steps to your professional cover letter.</p>
                 </Reveal>
+                <Reveal>
                     <div className="flex justify-center mb-10">
                         <div className="flex bg-[#0F2A4A] rounded-xl p-1 border border-[#faa329]">
                             <button onClick={() => setActiveTab("template")} className={`px-6 py-2 rounded-lg font-semibold transition cursor-pointer ${activeTab === "template" ? "bg-[#faa329] text-[#0F2A4A]": "text-[#faa329]"}`}>
@@ -71,6 +72,7 @@ const HowItWorks = () => {
                             </button>
                         </div>
                     </div>
+                </Reveal>
                 <div className="relative">
                     <div className='absolute right-6 top-0 h-full w-0.5 bg-[#faa329] md:top-12 md:translate-x-0 md:h-0.5 md:w-full'></div>
                         <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-16">
