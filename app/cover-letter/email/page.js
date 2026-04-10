@@ -36,6 +36,7 @@ const Page = () => {
             <div>
                 <h1 className='font-serif text-[32px] font-black text-[#0d0729] mb-3'>Get Your Professional Template</h1>
                 <p className='text-gray-600'>Enter your email to proceed to payment (R50)</p>
+                
                 <form onSubmit={initializePayment} className='border-gray-200 border rounded-2xl text-left mt-10 px-8 md:px-10 py-5 md:py-7 bg-white shadow-lg w-[90%] mx-auto md:max-w-3xl'>
                     <label className='font-semibold text-sm'>Email Address</label>
                     <div className='flex gap-3 items-center border border-gray-200 px-3 py-2 rounded-lg bg-[#e3e3e32f] my-2 focus-within:border-[#faa329] focus-within:border-2'>

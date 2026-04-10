@@ -30,9 +30,9 @@ const DownloadSection = ({token, email = ""}) => {
                         </span>
                     </span>
                 </p>
-                <p className='flex gap-2 text-xs items-center text-gray-500'>
-                    <Clock size={15}/>
-                    <span>This link will expire shortly for security reasons.</span>
+                <p className='flex gap-2 text-xs items-start text-gray-500 leading-snug'>
+                    <Clock size={14} className='mt-0.5 shrink-0'/>
+                    <span className='text-left'>This link will expire shortly for security reasons.</span>
                 </p>
             </div>
 
