@@ -100,7 +100,7 @@ const HowItWorks = () => {
                 ) : (
                     <Link href="https://docs.google.com/forms" target="_blank" className="flex items-center border bg-[#e69c1d] text-[#0F2A4A] px-3 md:px-7 lg:px-8 py-4 rounded-xl gap-2 font-semibold hover:bg-[#e6b71d] transition">
                         <span>Book Consultation</span>
-                        <ExternalLink />
+                        <ExternalLink size={15} />
                     </Link>
     )}
                 </div>

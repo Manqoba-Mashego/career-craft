@@ -6,8 +6,10 @@ import React, { useState } from 'react'
 
 const Page = () => {
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
     const initializePayment = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const res = await fetch("/api/initialize", {
             method: "POST",
             headers: {
@@ -22,12 +24,12 @@ const Page = () => {
 
         const data = await res.json();
 
-        console.log(data);
-
         if (data.data?.authorization_url) {
             window.location.href = data.data.authorization_url;
+        } else {
+            setLoading(false);
         }
-        };
+    };
   return (
     <Reveal>
         <div className='flex items-center justify-center w-full h-screen text-center '>
@@ -41,9 +43,18 @@ const Page = () => {
                         <input type='email' onChange={(e) => setEmail(e.target.value)} placeholder='example@gmail.com' className='border-none outline-none text-sm w-full' required />
                     </div>
                     <p className='text-gray-500 text-xs'>Your receipt will be sent to this email</p>
-                    <button type='submit' className='shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center justify-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] py-3 text-sm  rounded-xl gap-2 font-semibold w-full text-center mt-6'>
-                        <span>Continue to Payment</span>
-                        <ArrowRight size={18} />
+                    <button type='submit' disabled={loading} className={`shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)] flex mx-auto items-center justify-center transition-all duration-300 py-3 text-sm rounded-xl gap-2 font-semibold w-full mt-6 ${loading ? "bg-gray-300 text-gray-500 cursor-not-allowed": "bg-[#e69c1d] text-[#0F2A4A] hover:bg-[#e6b71d]"}`}>
+                        {loading ? (
+                            <>
+                                <span className="animate-spin w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full"></span>
+                                <span>Redirecting...</span>
+                            </>
+                        ) : (
+                            <>
+                                <span>Continue to Payment</span>
+                                <ArrowRight size={18} />
+                            </>
+                        )}
                     </button>
                     <p className='flex gap-2 text-gray-500 w-full items-center justify-center mt-4 text-xs'>
                         <Shield size={15}/>
