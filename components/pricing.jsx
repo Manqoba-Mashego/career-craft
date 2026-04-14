@@ -19,7 +19,7 @@ const Pricing = () => {
             price: 70,
             points: ["Role-specific cover letter creation", "Personalised content based on your experience","Live consultation & guidance", "One revision round"],
             cta: "Book Session",
-            ctaLink: "https://docs.google.com/forms",
+            ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLScVwkrrxaRwNxSCnMmr6QnR2fOK3UFLQJcMqz4DF7pXiNU9Yg/viewform?pli=1",
             blank: true
         },
         {
