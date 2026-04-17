@@ -52,13 +52,19 @@ function DownloadPage() {
   }, [token]);
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      {status === "verifying" && <p>Verifying your link...</p>}
+    <>
+      {status === "verifying" && (
+        <div className="flex items-center justify-center h-screen">
+          <p>Verifying your link...</p>
+        </div>
+      )}
       {status === "success" && <DownloadSection token={token} email={email}/>}
       {status === "error" && (
-        <p>Invalid or expired link. Please check your email or try again.</p>
+        <div className="flex items-center justify-center h-screen">
+          <p>Invalid or expired link. Please check your email or try again.</p>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

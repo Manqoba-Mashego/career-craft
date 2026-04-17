@@ -10,7 +10,7 @@ const Pricing = () => {
             price: 50,
             points: ["ATS-friendly layout", "Editable Word file", "Quick download"],
             cta: "Get Template",
-            ctaLink: "#cover-letter",
+            ctaLink: "/cover-letter/email",
             blank: false
         },
         {
