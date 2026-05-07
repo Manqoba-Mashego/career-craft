@@ -33,8 +33,8 @@ const Footer = () => {
           <p className='text-[#faa329] font-bold font-serif mb-2'>LEGAL</p>
           <div className='flex flex-col text-gray-400 gap-3 md:gap-2 min-w-fit'>
             <Link href={"/privacy-policy"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Privacy Policy</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Refund & Cancellation</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Terms of Use</Link>
+            <Link href={"/refund-and-cancellation"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Refund & Cancellation</Link>
+            <Link href={"/terms-of-use"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Terms of Use</Link>
           </div>
         </div>
 

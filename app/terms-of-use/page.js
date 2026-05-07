@@ -1,10 +1,10 @@
 import PolicyPage from '@/components/policyPage'
-import { privacyPolicy } from '@/data/privacyPolicy'
+import { termsOfUse } from '@/data/termsOfUse'
 import React from 'react'
 
 const page = () => {
   return (
-    <PolicyPage policy={privacyPolicy} />
+    <PolicyPage policy={termsOfUse} />
   )
 }
 
