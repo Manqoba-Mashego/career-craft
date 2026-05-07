@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div className='w-full bg-[#162B4E]'>
       <hr className='text-gray-600 mb-10' />
-      <div className='flex justify-between w-[90%] mx-auto'>
-        {/* The us div */}
+
+      <div className='flex flex-col w-[90%] md:flex-row gap-12 md:gap-12 md:w-[95%] justify-between lg:w-[85%] mx-auto'>
         <div>
           <div className='flex flex-col gap-3'>
             <div className='flex gap-2'>
@@ -21,26 +21,26 @@ const Footer = () => {
 
         <div>
           <p className='text-[#faa329] font-bold font-serif mb-2'>SERVICES</p>
-          <div className='flex flex-col text-gray-400 gap-2'>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300' >CV Consultation</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300' >Cover Letter </Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300' >Interview Prep</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300'>Free Resources</Link>
+          <div className='flex flex-col text-gray-400 gap-3 md:gap-2 min-w-fit'>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >CV Consultation</Link>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Cover Letter </Link>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Interview Prep</Link>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Free Resources</Link>
           </div>
         </div>
 
         <div>
           <p className='text-[#faa329] font-bold font-serif mb-2'>LEGAL</p>
-          <div className='flex flex-col text-gray-400 gap-2'>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300'>Privacy Policy</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300'>Refund & Cancellation</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300'>Terms of Use</Link>
+          <div className='flex flex-col text-gray-400 gap-3 md:gap-2 min-w-fit'>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Privacy Policy</Link>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Refund & Cancellation</Link>
+            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Terms of Use</Link>
           </div>
         </div>
 
         <div>
           <p className='text-[#faa329] font-bold font-serif mb-2'>CONTACT</p>
-          <div className='text-gray-400 flex flex-col gap-2'>
+          <div className='text-gray-400 flex flex-col gap-3 md:gap-2'>
             <Link href={"mailto:zindzi1997@gmail.com"} className='flex gap-2 items-center'>
               <Mail className='text-[#faa329]' size={17}/>
               <span className='hover:text-[#faa329] transition-all ease-in duration-300'>zindzi1997@gmail.com</span>
@@ -54,6 +54,7 @@ const Footer = () => {
         </div>
 
       </div>
+
       <div className=' pb-10 px-10 md:px-25 mt-15'>
   
           <div className='flex items-center justify-center mt-5'>
