@@ -30,4 +30,19 @@ body {
   .form-title {
     @apply font-bold text-xl mb-4;
   }
+
+  .policy  {
+    @apply font-bold font-serif text-4xl;
+  }
+  .last-update {
+    @apply text-gray-600 mt-2;
+  }
+
+  .policy-point {
+    @apply font-bold font-sans text-xl mb-2 ;
+  }
+
+  .policy-list {
+    @apply list-disc ml-10;
+  }
 }

@@ -22,9 +22,9 @@ const Footer = () => {
         <div>
           <p className='text-[#faa329] font-bold font-serif mb-2'>SERVICES</p>
           <div className='flex flex-col text-gray-400 gap-3 md:gap-2 min-w-fit'>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >CV Consultation</Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Cover Letter </Link>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Interview Prep</Link>
+            <Link href={"#cv-consultation"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >CV Consultation</Link>
+            <Link href={"#cover-letter"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Cover Letter </Link>
+            <Link href={"#interview-prep"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap' >Interview Prep</Link>
             <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Free Resources</Link>
           </div>
         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
         <div>
           <p className='text-[#faa329] font-bold font-serif mb-2'>LEGAL</p>
           <div className='flex flex-col text-gray-400 gap-3 md:gap-2 min-w-fit'>
-            <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Privacy Policy</Link>
+            <Link href={"/privacy-policy"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Privacy Policy</Link>
             <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Refund & Cancellation</Link>
             <Link href={"#"} className='hover:text-[#faa329] transition-all ease-in duration-300 whitespace-nowrap'>Terms of Use</Link>
           </div>
