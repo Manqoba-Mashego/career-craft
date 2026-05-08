@@ -5,7 +5,12 @@ import { CircleCheckBig, ExternalLink, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 const CVSection = () => {
-	const points = ["Expert of your existing CV", "ATS-optimized formatting & keywords", "Professional layout & personal branding", "Detailed feedback on content & structure", "Industry-specific tailoring", "One round of revisions included"]
+	const points = ["Expert of your existing CV", "ATS-optimized formatting & keywords", "Professional layout & personal branding", "Detailed feedback on content & structure", "Industry-specific tailoring", "One round of revisions included"];
+	const handleScroll = (id) => {
+		document.getElementById(id)?.scrollIntoView({
+		behavior: "smooth",
+		});
+  }
 
   return (
     <div className='min-h-screen py-24 scroll-mt-15 bg-[#162B4E]' id='cv-consultation'>
@@ -32,9 +37,9 @@ const CVSection = () => {
 					))}
 					</ul>
 					<div>
-						<Link href="#pricing" className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-3 md:px-7 lg:px-10 py-4  rounded-xl gap-2 font-semibold w-fit">
+						<button onClick={() => handleScroll("pricing")} className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-3 md:px-7 lg:px-10 py-4  rounded-xl gap-2 font-semibold w-fit">
 							<span>Book CV Consultation</span> 
-						 </Link>
+						 </button>
 						<p className='text-center text-xs text-gray-400 mt-2'>You'll be redirected to our Google Form to submit your details</p>
 					</div>
 			</div>
