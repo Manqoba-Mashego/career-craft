@@ -95,14 +95,13 @@ const HowItWorks = () => {
                 </div>
                 <div className="flex justify-center mt-12 gap-4">
                 {activeTab === "template" ? (
-                    <Link href="/cover-letter/email" className="flex items-center bg-[#e69c1d] hover:bg-[#e6b71d] text-[#0F2A4A] px-8 lg:px-10 py-4 rounded-xl gap-2 font-semibold">
+                    <Link href="/cover-letter-template/email" className="flex items-center bg-[#e69c1d] hover:bg-[#e6b71d] text-[#0F2A4A] px-8 lg:px-10 py-4 rounded-xl gap-2 font-semibold">
                         <Download />
                         <span>Get Template</span>
                     </Link>
                 ) : (
-                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLScVwkrrxaRwNxSCnMmr6QnR2fOK3UFLQJcMqz4DF7pXiNU9Yg/viewform?pli=1" target="_blank" className="flex items-center border bg-[#e69c1d] text-[#0F2A4A] px-3 md:px-7 lg:px-8 py-4 rounded-xl gap-2 font-semibold hover:bg-[#e6b71d] transition">
+                    <Link href="/consultation/cover-letter/email" className="flex items-center border bg-[#e69c1d] text-[#0F2A4A] px-3 md:px-7 lg:px-8 py-4 rounded-xl gap-2 font-semibold hover:bg-[#e6b71d] transition">
                         <span>Book Consultation</span>
-                        <ExternalLink size={15} />
                     </Link>
     )}
                 </div>

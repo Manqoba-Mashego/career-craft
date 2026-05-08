@@ -47,7 +47,7 @@ const InterviewPrepSection = () => {
         </Reveal>
 		<Reveal>
 			<div className='mt-10'>
-				<Link href="https://docs.google.com/forms/d/e/1FAIpQLSf9KOtBdluKxl_lBuIooc8NjubwdPRpdNiUQXXh4xPegSQdVw/viewform" target='blank' className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-10 py-4  rounded-xl gap-2 font-semibold w-fit"><span>Book a Session</span> <ExternalLink size={15}/></Link>
+				<Link href="/consultation/interview-prep/email" className="shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)]  flex mx-auto items-center bg-[#e69c1d] transition-all ease-out duration-300 text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d] px-10 py-4  rounded-xl gap-2 font-semibold w-fit"><span>Book a Session</span></Link>
 				<p className='text-center text-xs text-gray-500 mt-2'>You'll be redirected to our Google Form to book your session</p>
 			</div>
 		</Reveal>
