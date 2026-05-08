@@ -49,6 +49,7 @@ const Navbar = () => {
                         <button onClick={() => scrollToSection("cv-consultation")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>CV Consultation</button>
                         <button onClick={() => scrollToSection("interview-prep")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Interview Prep</button>
                         <button onClick={() => scrollToSection("cover-letter")} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Cover Letter</button>
+                        <Link href={"/free-resources"} className=' hover:text-[#e6b01d] px-4 py-2 transition rounded-lg cursor-pointer'>Free Resources</Link>
                     </div>
 
                     
@@ -69,7 +70,7 @@ const Navbar = () => {
                         <button onClick={() => toggleMenu("cv-consultation")} className=' hover:text-[#e6b01d] text-left py-1 transition-all duration-300 cursor-pointer'>CV Consultation</button>
                         <button onClick={() => toggleMenu("interview-prep")} className=' hover:text-[#e6b01d] text-left py-1 transition-all duration-300 cursor-pointer'>Interview Prep</button>
                         <button onClick={() => toggleMenu("cover-letter")} className=' hover:text-[#e6b01d] text-left py-1 transition-all duration-300 cursor-pointer'>Cover Letter</button>
-                        {/* <Link href={"/"} onClick={toggleMenu} className='text-gray-700 hover:text-[#e6b01d] transition'>Services</Link> */}
+                        <Link href={"/free-resources"} className=' hover:text-[#e6b01d] text-left py-1 transition-all duration-300 cursor-pointer'>Free Resources</Link>
                     </div>
                 </div>
             )}
