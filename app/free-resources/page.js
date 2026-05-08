@@ -5,7 +5,7 @@ import React from 'react'
 const page = () => {
   return (
       <div className='bg-[#f3f3f34c] w-full h-screen relative '>
-        <Link href={"/"} className='flex gap-2 items-center text-gray-600 hover:text-[#faa329] text-[16px] w-fit transition duration-150 absolute top-[100px] left-[70px] md:top-[120px] md:left-1/4'>
+        <Link href={"/"} className='flex gap-2 items-center text-gray-600 hover:text-[#faa329] text-[16px] w-fit transition duration-150 absolute top-[100px] left-[50px] md:top-[120px] md:left-1/4'>
           <ArrowLeft size={18} />
             <span>Back to home</span>
         </Link>
