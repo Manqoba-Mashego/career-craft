@@ -77,7 +77,7 @@ export async function GET(req) {
         return new Response(null, {
             status: 302,
             headers: {
-                Location: `/cover-letter/download?token=${newToken}`,
+                Location: `/cover-letter-template/download?token=${newToken}`,
                 "Cache-Control": "no-store",
             },
         });

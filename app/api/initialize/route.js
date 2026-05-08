@@ -1,12 +1,12 @@
 export async function POST(req) {
   try {
-    const { email, amount, callback_url } = await req.json();
+    const { email, amount, callback_url, service_id } = await req.json();
 
     if (!email || !amount) {
       return new Response(JSON.stringify({ error: "Email and amount required" }), { status: 400 });
     }
 
-    const fixedAmount = 5000;
+    const fixedAmount = service_id === 0 ? 5000 : service_id === 1 ? 7000 : service_id === 2 ? 8000: service_id === 3 ? 10000 : 15000;
     if (amount !== fixedAmount) {
       return new Response(JSON.stringify({ error: "Invalid amount" }), { status: 400 });
     }

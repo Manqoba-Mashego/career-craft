@@ -1,0 +1,7 @@
+Small note to self:
+    For service id:
+        0 = cover letter template
+        1 = cover letter consultation
+        2 = cv revamp
+        3 = cv creation
+        4 = interview prep

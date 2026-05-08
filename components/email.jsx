@@ -4,7 +4,7 @@ import {ArrowRight, Mail, MoveLeft, Shield } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-const Page = () => {
+const Email = ({heading, amount, service_id, callback_url}) => {
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
     const initializePayment = async (e) => {
@@ -17,8 +17,9 @@ const Page = () => {
             },
             body: JSON.stringify({
             email,
-            amount: 5000,
-            callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cover-letter/verify`
+            amount: amount * 100,
+            callback_url,
+            service_id
             }),
         });
 
@@ -34,8 +35,8 @@ const Page = () => {
     <Reveal>
         <div className='flex items-center justify-center w-full h-screen text-center '>
             <div>
-                <h1 className='font-serif text-[32px] font-black text-[#0d0729] mb-3'>Get Your Professional Template</h1>
-                <p className='text-gray-600'>Enter your email to proceed to payment (R50)</p>
+                <h1 className='font-serif text-[32px] font-black text-[#0d0729] mb-3'>{heading}</h1>
+                <p className='text-gray-600'>Enter your email to proceed to payment (R{amount})</p>
                 
                 <form onSubmit={initializePayment} className='border-gray-200 border rounded-2xl text-left mt-10 px-8 md:px-10 py-5 md:py-7 bg-white shadow-lg w-[90%] mx-auto md:max-w-3xl'>
                     <label className='font-semibold text-sm'>Email Address</label>
@@ -44,7 +45,7 @@ const Page = () => {
                         <input type='email' onChange={(e) => setEmail(e.target.value)} placeholder='example@gmail.com' className='border-none outline-none text-sm w-full' required />
                     </div>
                     <p className='text-gray-500 text-xs'>Your receipt will be sent to this email</p>
-                    <button type='submit' disabled={loading} className={`shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)] flex mx-auto items-center justify-center transition-all duration-300 py-3 text-sm rounded-xl gap-2 font-semibold w-full mt-6 ${loading ? "bg-gray-300 text-gray-500 cursor-not-allowed": "bg-[#e69c1d] text-[#0F2A4A] hover:bg-[#e6b71d]"}`}>
+                    <button type='submit' disabled={loading} className={`shadow-[0_4px_10px_rgba(230,156,29,0.18),0_0_4px_rgba(230,156,29,0.15)] flex mx-auto items-center justify-center transition-all duration-300 py-3 text-sm rounded-xl gap-2 font-semibold w-full mt-6 ${loading ? "bg-gray-300 text-gray-500 cursor-not-allowed": "bg-[#e69c1d] text-[#0F2A4A] cursor-pointer hover:bg-[#e6b71d]"}`}>
                         {loading ? (
                             <>
                                 <span className="animate-spin w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full"></span>
@@ -74,4 +75,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Email

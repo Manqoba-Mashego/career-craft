@@ -10,7 +10,7 @@ const Pricing = () => {
             price: 50,
             points: ["ATS-friendly layout", "Editable Word file", "Quick download"],
             cta: "Get Template",
-            ctaLink: "/cover-letter/email",
+            ctaLink: "/cover-letter-template/email",
             blank: false
         },
         {
@@ -19,8 +19,8 @@ const Pricing = () => {
             price: 70,
             points: ["Role-specific cover letter creation", "Personalised content based on your experience","Live consultation & guidance", "One revision round"],
             cta: "Book Session",
-            ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLScVwkrrxaRwNxSCnMmr6QnR2fOK3UFLQJcMqz4DF7pXiNU9Yg/viewform?pli=1",
-            blank: true
+            ctaLink: "/consultation/cover-letter/email",
+            blank: false
         },
         {
             service: "CV Revamp",
@@ -28,8 +28,8 @@ const Pricing = () => {
             price: 80,
             points: ["Layout & design refresh", "ATS keyword optimisation", "Content restructuring", "One revision round"],
             cta: "Book Now",
-            ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSc5Kq3siizIADxEGE34pOF1vWZUqNEjfjzWrZO1ESDCtW97Zg/viewform",
-            blank: true
+            ctaLink: "/consultation/cv-revamp/email",
+            blank: false
         },
         {
             service: "CV Creation",
@@ -37,8 +37,8 @@ const Pricing = () => {
             price: 100,
             points: ["Custom layout & design", "ATS keyword optimisation", "Personal branding", "One revision round"],
             cta: "Book Now",
-            ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSc5Kq3siizIADxEGE34pOF1vWZUqNEjfjzWrZO1ESDCtW97Zg/viewform",
-            blank: true
+            ctaLink: "/consultation/cv-creation/email",
+            blank: false
         },
         {
             service: "Interview Prep",
@@ -46,7 +46,7 @@ const Pricing = () => {
             price: 150,
             points: ["Mocking interview session", "Personalised feedback", "Behavioral question prep", "Follow-up tips"],
             cta: "Book Session",
-            ctaLink: "#interview-prep",
+            ctaLink: "/consultation/interview-prep/email",
             blank: false
         },
     ]
